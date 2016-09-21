@@ -4,6 +4,4 @@ body{background: #faebd7}
 #wrapper{ margin: auto; }
 #items{	width: 100%; }
 
-.table{border: solid white 3px; width: 800px; height: 500px; text-align: center}
-.row{border: solid white 3px;}
-td{border: solid white 3px;}
+#greeting{display: none;}
