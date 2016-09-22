@@ -52,7 +52,7 @@
       <td><?php the_excerpt(); ?></td>
       <td><?php echo get_the_post_thumbnail(); ?></td>
     </tr>
-?>
+?->
 <?php endwhile; endif; ?>
  </table>
 

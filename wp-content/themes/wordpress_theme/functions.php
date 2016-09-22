@@ -135,25 +135,11 @@
 	add_action('init', 'custom_post_types');
 
 	add_theme_support( 'post-thumbnails' ); 
-
-
 ?>
 
-<span id="chty_17">
-<?php
-$args = array('post_type'=> 'charity','post__in' => array(36));
-$custom_query = get_posts($args);
-foreach ($custom_query as $post) :
-setup_postdata($post); ?>
-<dt><?php the_title; ?></dt>
-<dd>
-<?php echo get_the_post_thumbnail(); ?>
-<h2><?php the_title; ?></h2>
-<p><?php the_excerpt; ?></p>
-<p><a class="more" href="<?php echo get_post_permalink();?>">Find out more &raquo;</a></p></dd>
-<?php endforeach;
-wp_reset_postdata();?>
-</span>
+<?php require_once(TEMPLATEPATH. '/functions/admin-menu.php'); ?>
+
+
 
 
 
