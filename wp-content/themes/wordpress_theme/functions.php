@@ -7,7 +7,7 @@
     	wp_get_current_user();
     	
 		if ( is_user_logged_in() ) {
-	    	echo "<strong>Hello ",$current_user->user_login . "\n</strong>";
+	    	echo "<strong id = 'greet'>Hello ",$current_user->user_login . "\n</strong>";
 		} else {
 	    	echo 'Hello guest.';
 		}
@@ -103,8 +103,8 @@
 
 	function newsletterForm(){
 		$my_form = "<form class='my_form_class'>
-						<input type='text' placeholder='Your name'> <br><br>
-						<input type='text' placeholder='Your email'> <br><br>
+						<input type='text' placeholder='Your name' size=40> <br><br>
+						<input type='text' placeholder='Your email'  size=40> <br><br>
 						<input type='submit' value='Click to submit'>
 					</form> ";		
 		return $my_form;
@@ -140,7 +140,28 @@
 <?php require_once(TEMPLATEPATH. '/functions/admin-menu.php'); ?>
 
 
+<?php
+	add_action( 'admin_menu', 'my_plugin_menu' );
 
+	function my_plugin_menu() {
+		// add_options_page();
+		add_menu_page( 'My Plugin Options', 'My Plugin', 'manage_options', 'my-unique-identifier', 'my_plugin_options' );
+	}
+
+	function my_plugin_options() {
+		if ( !current_user_can( 'manage_options' ) )  {
+			wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+		}
+		echo '<div class="wrap">';
+		echo '<p>Here is where the form would go if I actually had options.</p>';
+		//Diplay current menu positions
+		echo '<pre>';
+		print_r($GLOBALS['menu']);
+		echo '</pre>';
+		echo '</div>';
+	}
+
+?>
 
 
 

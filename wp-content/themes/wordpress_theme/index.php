@@ -26,6 +26,7 @@
 	<?php //get_all_options(); ?>
 </div>
 
+<h1 id="view_short_code"><a href="#">Click For News Letter Subscription</a></h1>
 <div class="shortcode">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -117,4 +118,12 @@
 
 	<?php endif; ?>
 </table>
+
+<div class="social">
+Twitter  : <?php echo get_option( 'option_1');  ?><br />
+Facebook : <?php echo get_option( 'option_2'); ?><br>
+Linkedin : <?php echo get_option( 'option_3' ); ?>
+</div>
+
+
 <?php get_footer(); ?>
