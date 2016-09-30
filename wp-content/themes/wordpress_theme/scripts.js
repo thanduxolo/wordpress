@@ -14,7 +14,7 @@
 	});
 
 	$("#view_short_code").on('click', function(){
-		$('.shortcode').show(10000);
+		$('.shortcode').slideToggle();
 	});
 
  });

@@ -1,0 +1,34 @@
+/*
+ Theme Name:   wordpress_theme_child
+ Theme URI:    C:\xampp\htdocs\www\wordpress\wp-content\themes\wordpress_theme_child
+ Description:  My first child theme, based on wordpress_theme
+ Author:       Thando
+ Author URI:   http://www.lightswitch.solutions
+ Template:     wordpress_theme
+ Version:      1.0.0
+ Tags:         black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready, responsive-layout, infinite-scroll, post-slider, design, food, journal, magazine, news, photography, portfolio, clean, contemporary, dark, elegant, modern, professional, sophisticated
+ Text Domain:  wordpress_theme_child
+*/
+
+body{background: #faebd7}
+#header { border: 2px #a2a2a2 solid; }
+#footer { border: 2px #a2a2a2 solid; }
+#wrapper{ margin: auto; }
+#items{	width: 100%; }
+#greeting{display: none; font-size: 30pt; background-color: #fcd455; }
+
+.table{border: solid black 3px; width: 800px; height: 500px; text-align: center}
+.row{border: solid black 3px;}
+td{border: solid black 3px;}
+.shortcode{display: none; border: solid white 1px; width: 800px;}
+
+#mywrapper{
+	margin-left: 10%;
+	margin-right: 10%;
+	background: white;
+}
+
+.container{
+	margin-left: 5%;
+	margin-right: 5%;
+}

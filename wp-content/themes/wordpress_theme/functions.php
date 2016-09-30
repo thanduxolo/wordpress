@@ -111,7 +111,6 @@
 	}
 	add_shortcode('news_letter_subscription', 'newsletterForm');
 
-
 	function custom_post_types() {
 		$labels = array(
 			'name'          => 'Teams',
@@ -163,9 +162,12 @@
 
 ?>
 
+<?php
+	function action_hook_example() {
+ 		 echo '<meta name="google-analytics" content="sdfjhb23423!@#6516514" />';
+	}
+	add_action('wp_head', 'action_hook_example');
+?>
 
-
-
-	
 
 
